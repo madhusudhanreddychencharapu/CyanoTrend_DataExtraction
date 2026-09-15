@@ -1,0 +1,14 @@
+{
+  "tests_passed": 22,
+  "test_warnings": 6,
+  "static_checks": "passed",
+  "documentation_links": "passed",
+  "wheel_build": "passed",
+  "installed_cli_help": "passed",
+  "live_dashboard_http": "passed",
+  "dashboard_components": 181,
+  "dashboard_event_handlers": 28,
+  "notebook_files": 0,
+  "real_scene_processing": "not executed",
+  "scientific_parity": "synthetic direct reference comparison only"
+}

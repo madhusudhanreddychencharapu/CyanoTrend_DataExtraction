@@ -1,0 +1,1808 @@
+{
+  "reference_filename": "S3_OLCI_L2Gen_CyanoLake_GLOBAL_EFFICIENT_v2_6_8_NATIVE_FIRST_CYAN_COMPARISON.ipynb",
+  "reference_sha256": "044cbc3395645362788f0da2669c8f23d1ad9deff77d92738de21fe00fdf6c67",
+  "selected_definitions": [
+    {
+      "name": "operational_tag_key",
+      "module": "installer",
+      "cell": 5,
+      "line": 24,
+      "end_line": 28,
+      "reference_sha256": "8f5d7e2da051dacb78c9f2c0db32b1ea469c91786a7a45572e0858f69b9b7579"
+    },
+    {
+      "name": "_tail",
+      "module": "installer",
+      "cell": 5,
+      "line": 31,
+      "end_line": 33,
+      "reference_sha256": "03629e6df02bafc98acb4b72a2768ba080d4cb5bff16ee17a9b467eda54819c8"
+    },
+    {
+      "name": "_valid_ocssw_install",
+      "module": "installer",
+      "cell": 5,
+      "line": 36,
+      "end_line": 43,
+      "reference_sha256": "b9bc23a4ceb92f453f0cde368fd96e41b4492f22e011e18ec964de1519846e30"
+    },
+    {
+      "name": "install_ocssw_for_olci",
+      "module": "installer",
+      "cell": 5,
+      "line": 46,
+      "end_line": 187,
+      "reference_sha256": "dffde74ae5a6446833a01c04707aedf6eb9264eeb969fe60af882be2bffac3d8"
+    },
+    {
+      "name": "read_bash_environment",
+      "module": "runtime",
+      "cell": 11,
+      "line": 38,
+      "end_line": 54,
+      "reference_sha256": "19df9c89f812f9f14495305e1c4af14d732d016eb98401a1b16d8f7e49c95c70"
+    },
+    {
+      "name": "_proj_database_layout",
+      "module": "runtime",
+      "cell": 11,
+      "line": 86,
+      "end_line": 93,
+      "reference_sha256": "ac2df819e607d174fcda8588bf68d8c1ad14dab332edd20f3223bdbe5339c0d5"
+    },
+    {
+      "name": "find_ocssw_tool",
+      "module": "runtime",
+      "cell": 11,
+      "line": 116,
+      "end_line": 125,
+      "reference_sha256": "adffe7fb5000946707781444fe617f6329acc848ff980c7745d72da2c025cc0f"
+    },
+    {
+      "name": "command_version",
+      "module": "runtime",
+      "cell": 11,
+      "line": 132,
+      "end_line": 143,
+      "reference_sha256": "3211ec32812a886ffd5176e953f3200b7c2227b82ae77f869712f5aaf6b65b3a"
+    },
+    {
+      "name": "utc_now",
+      "module": "utils",
+      "cell": 12,
+      "line": 1,
+      "end_line": 2,
+      "reference_sha256": "5ac0af26c7a6f3846f35039149a2dd189c6d42f5a79199ad4091de0e82f23dc8"
+    },
+    {
+      "name": "human_size",
+      "module": "utils",
+      "cell": 12,
+      "line": 5,
+      "end_line": 10,
+      "reference_sha256": "867cb372c6126feda9c4a60c8e91563949e85f4f0f28fe2fde2e8e5246cbd90c"
+    },
+    {
+      "name": "sha256_file",
+      "module": "utils",
+      "cell": 12,
+      "line": 13,
+      "end_line": 18,
+      "reference_sha256": "f00c6d642ab02d0cb476fc99018094387a67b5afc1a026066bd116d17b1d4489"
+    },
+    {
+      "name": "write_json",
+      "module": "utils",
+      "cell": 12,
+      "line": 21,
+      "end_line": 27,
+      "reference_sha256": "2c39be377101c601944e5b04eb5415dc843c847ecf0e52065ba7a97159bed06e"
+    },
+    {
+      "name": "run_logged",
+      "module": "utils",
+      "cell": 12,
+      "line": 30,
+      "end_line": 64,
+      "reference_sha256": "ca857f49e601328718ae24cd4b07c1433093f9c94b7d9a7ef019d01128a71870"
+    },
+    {
+      "name": "require_ocssw",
+      "module": "runtime",
+      "cell": 12,
+      "line": 67,
+      "end_line": 71,
+      "reference_sha256": "fb73ba2d2450f8c138934674a4b4985a534dccf2efcf0f34978de0164a5c1d87"
+    },
+    {
+      "name": "CDSEAuth",
+      "module": "auth",
+      "cell": 14,
+      "line": 9,
+      "end_line": 36,
+      "reference_sha256": "57676ec4fe7821ebd262b6d3bf4abc87a0298d9734e058942c7ca0c34487c3ab"
+    },
+    {
+      "name": "normalize_bbox",
+      "module": "catalogue",
+      "cell": 14,
+      "line": 42,
+      "end_line": 46,
+      "reference_sha256": "fe89f0aa2dd78e528564d427a655c8aab9977fbbb4553c84c9b0f5d28977159a"
+    },
+    {
+      "name": "search_olci_l1",
+      "module": "catalogue",
+      "cell": 14,
+      "line": 49,
+      "end_line": 95,
+      "reference_sha256": "625bc1902877347432149e5f1369f44b82f3d496cc4cc95957d0333dfc34abde"
+    },
+    {
+      "name": "safe_extract_zip",
+      "module": "staging",
+      "cell": 15,
+      "line": 1,
+      "end_line": 22,
+      "reference_sha256": "270681b5c3262b39aa0c89fa081dcfaf0643e94393ced5e800e11fc384a7842c"
+    },
+    {
+      "name": "validate_sen3",
+      "module": "staging",
+      "cell": 15,
+      "line": 25,
+      "end_line": 33,
+      "reference_sha256": "ba01ca73e606dada441b1f35552236401298358cf2d894b33b36f5de0e41d2e4"
+    },
+    {
+      "name": "download_cdse_scene",
+      "module": "staging",
+      "cell": 15,
+      "line": 36,
+      "end_line": 101,
+      "reference_sha256": "af2fea6d97e997a58a95c0864b2a5c220c405fb5ecf5e3a90d5e1ab57c833a8e"
+    },
+    {
+      "name": "stage_existing_input",
+      "module": "staging",
+      "cell": 15,
+      "line": 104,
+      "end_line": 120,
+      "reference_sha256": "40e67f9e5efcd2d0e3c75ceb535776167559572e4ee05fe329c313bc302ed07e"
+    },
+    {
+      "name": "l2_products",
+      "module": "l2gen",
+      "cell": 48,
+      "line": 69,
+      "end_line": 82,
+      "reference_sha256": "4af84e3f0ab07c8e5841799f0d0226c90e99cfb24262a43bb3c1f8d19781279b"
+    },
+    {
+      "name": "write_par_file",
+      "module": "l2gen",
+      "cell": 17,
+      "line": 27,
+      "end_line": 38,
+      "reference_sha256": "5ba8d7123e24b7b489431910346a203a1f0ee1ea03399675c184f2f976444b05"
+    },
+    {
+      "name": "product_basename",
+      "module": "l2gen",
+      "cell": 17,
+      "line": 41,
+      "end_line": 42,
+      "reference_sha256": "a7f640a892f9b7d4da14b3a0e5bafff5a86ec9ef65bf28c23cdad881f7f25cf5"
+    },
+    {
+      "name": "olci_acquisition_interval",
+      "module": "l2gen",
+      "cell": 17,
+      "line": 45,
+      "end_line": 64,
+      "reference_sha256": "1b7e4a7735bacfb6126193fc31dd2e8ca27ae4b534d023b771878efe34d436ac"
+    },
+    {
+      "name": "validate_ancillary_par",
+      "module": "l2gen",
+      "cell": 17,
+      "line": 67,
+      "end_line": 100,
+      "reference_sha256": "f0105754a1e1f87b7547e97984af8a82e169ab52f8f98c0fdf9892b4681b1904"
+    },
+    {
+      "name": "run_getanc",
+      "module": "l2gen",
+      "cell": 17,
+      "line": 103,
+      "end_line": 183,
+      "reference_sha256": "07f93293419f96c4ebb967825d95000e9437be485cfe262b2e591887858e0ba6"
+    },
+    {
+      "name": "validate_l2_file",
+      "module": "l2gen",
+      "cell": 29,
+      "line": 52,
+      "end_line": 78,
+      "reference_sha256": "d369070f0b973a38595f326a70b49a28e367092458b16d9590bbddd5689d2ccb"
+    },
+    {
+      "name": "run_l2gen",
+      "module": "l2gen",
+      "cell": 17,
+      "line": 228,
+      "end_line": 344,
+      "reference_sha256": "8393a4a31a5e1c2a80d7b095dc0139c48a2a5688b0361a2c09071030a5a21dfa"
+    },
+    {
+      "name": "to_float",
+      "module": "science",
+      "cell": 19,
+      "line": 5,
+      "end_line": 6,
+      "reference_sha256": "aa9c1a1e2080aaa293a78ea340f6ccee7c39937ecbbb7593ea01392603be86d2"
+    },
+    {
+      "name": "product_wavelength",
+      "module": "science",
+      "cell": 19,
+      "line": 9,
+      "end_line": 13,
+      "reference_sha256": "8de07565af5abe59179e95aaac54d7024456085ecfd41a847f3b54f5b222381f"
+    },
+    {
+      "name": "nearest_product",
+      "module": "science",
+      "cell": 19,
+      "line": 16,
+      "end_line": 30,
+      "reference_sha256": "a2ed13e8bc28bd1e8443695c5b622ec0ae629d20f6cae4687b2cecf04c54820c"
+    },
+    {
+      "name": "decode_flag_metadata",
+      "module": "science",
+      "cell": 19,
+      "line": 33,
+      "end_line": 38,
+      "reference_sha256": "2b84926d8f14698a3b2f6617bae31638360858e8b0923179f32e20a44a08b41d"
+    },
+    {
+      "name": "flag_is_set",
+      "module": "science",
+      "cell": 19,
+      "line": 41,
+      "end_line": 45,
+      "reference_sha256": "b9ab5aa0ebde72256ba5f60b902ac1cf9ece715137fdf3181111dab2cf75fe75"
+    },
+    {
+      "name": "locate_l2_flags",
+      "module": "science",
+      "cell": 19,
+      "line": 48,
+      "end_line": 55,
+      "reference_sha256": "dd2637a69e7d07f8a4b09b8e2c69912e1ed9d07e8343749925dbf9c4ef80ae09"
+    },
+    {
+      "name": "ci_family",
+      "module": "science",
+      "cell": 30,
+      "line": 1,
+      "end_line": 21,
+      "reference_sha256": "0e5fea2dd1ed948c64ab613d0fbf602fbcdf00b2a07a57a1b1e613bcc2f8416d"
+    },
+    {
+      "name": "ndci_index",
+      "module": "science",
+      "cell": 20,
+      "line": 39,
+      "end_line": 46,
+      "reference_sha256": "21f3331d698a3fe6bab99b38b11502474389f6d081132c3041b5bfb51128aec8"
+    },
+    {
+      "name": "diagnose_l2_mask",
+      "module": "dense",
+      "cell": 30,
+      "line": 132,
+      "end_line": 263,
+      "reference_sha256": "60c49c3b598f418e96292869b6a855556ade1f618f76fab05a6f790f85df9f8c"
+    },
+    {
+      "name": "mask_diagnostic_tables",
+      "module": "dense",
+      "cell": 21,
+      "line": 186,
+      "end_line": 223,
+      "reference_sha256": "d7603a5b29a8cc5911cde04ce93dd1eda612f98a98eb366d8ddb49b72c82e183"
+    },
+    {
+      "name": "_create_float_variable",
+      "module": "dense",
+      "cell": 21,
+      "line": 226,
+      "end_line": 235,
+      "reference_sha256": "93039b78f0e77d77449b3d1cc6aaba5c1d195317dd1062bfc7ab14fde2955842"
+    },
+    {
+      "name": "validate_derived_file",
+      "module": "dense",
+      "cell": 21,
+      "line": 238,
+      "end_line": 281,
+      "reference_sha256": "14f8c229def4dfe0f275fc190fa0bfcfda1751fb1831943321e1f16620c3ef16"
+    },
+    {
+      "name": "build_indices_netcdf",
+      "module": "dense",
+      "cell": 30,
+      "line": 266,
+      "end_line": 514,
+      "reference_sha256": "a40b60b4fd15fa279f0840349dde6c5518939492c3db648a9348b8fd4760948a"
+    },
+    {
+      "name": "bbox_slices",
+      "module": "legacy_maps",
+      "cell": 25,
+      "line": 1,
+      "end_line": 20,
+      "reference_sha256": "3f3db6e3cd89a892be2c2fbfdf9851ce143be43ce799baeb76c928b846a26c3c"
+    },
+    {
+      "name": "preview_stride",
+      "module": "legacy_maps",
+      "cell": 25,
+      "line": 23,
+      "end_line": 24,
+      "reference_sha256": "15f8be9cbd2c27a859db6d7c1c141f6320fe96fece64bda8723cd3b243e714a7"
+    },
+    {
+      "name": "robust_limits",
+      "module": "legacy_maps",
+      "cell": 25,
+      "line": 27,
+      "end_line": 34,
+      "reference_sha256": "6ee06faf109b3caa81f10c2f3d0b19354d2d1c4a483a27b52f9bed7b093f6c79"
+    },
+    {
+      "name": "load_true_color",
+      "module": "legacy_maps",
+      "cell": 25,
+      "line": 37,
+      "end_line": 65,
+      "reference_sha256": "59b4763ffaa3bfa988f975bb44578d5d226a85c29ab6fdd93fcb0edd2557959c"
+    },
+    {
+      "name": "render_layer",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 519,
+      "end_line": 598,
+      "reference_sha256": "92728b6796aa7675030d841d81e8119541316c66bbaa83d514893c6c1ce2a909"
+    },
+    {
+      "name": "plot_layer",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 601,
+      "end_line": 609,
+      "reference_sha256": "d222dc8de6039d500c8f19c946a52c6baac004d8f8d4ce0061a3a44fe845a95f"
+    },
+    {
+      "name": "export_map_bundle",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 333,
+      "end_line": 380,
+      "reference_sha256": "db2b5b40a1b305b64d228347f3b545fbb0ae4280adbdbc874bb06cfe542baa26"
+    },
+    {
+      "name": "nearest_valid_pixel",
+      "module": "legacy_maps",
+      "cell": 26,
+      "line": 34,
+      "end_line": 47,
+      "reference_sha256": "e2d0454f8ddd43913ac43b90890360d7709cc482b397e3bfafc0372bc77f2ef9"
+    },
+    {
+      "name": "export_pixel_spectrum",
+      "module": "legacy_maps",
+      "cell": 26,
+      "line": 50,
+      "end_line": 111,
+      "reference_sha256": "5c17b4c42e19e9c512c6b6c18373d4f1b630b3da7eb0ce4e3561cebf5dd80756"
+    },
+    {
+      "name": "write_scene_manifest",
+      "module": "provenance",
+      "cell": 27,
+      "line": 1,
+      "end_line": 47,
+      "reference_sha256": "f9ab160343edaf0b7c006377e202893f2ef2d30f51bc156c65f51204c52ecb0e"
+    },
+    {
+      "name": "download_stream",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 81,
+      "end_line": 106,
+      "reference_sha256": "af3ebd9343801f1e9b44855a5bdfa6187b7e37fae8c5294b73486695c4fc8115"
+    },
+    {
+      "name": "_zip_vector_path",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 109,
+      "end_line": 114,
+      "reference_sha256": "5f08b56e982ab08bd556a525105877cf7671a66d12d1ae938aeac270f9d3a4e3"
+    },
+    {
+      "name": "_normalize_hydrolakes",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 117,
+      "end_line": 139,
+      "reference_sha256": "d620273d59cc34d7bd32ce1b671a11e9ba22ef64fa835be849580c94198e14b1"
+    },
+    {
+      "name": "prepare_hydrolakes",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 142,
+      "end_line": 183,
+      "reference_sha256": "d806c60b219570f32d12f3e6fd2d7a19c295eb242776eff0d2cfd51163b57b83"
+    },
+    {
+      "name": "load_hydrolakes_file",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 186,
+      "end_line": 193,
+      "reference_sha256": "0f4fb61f84f1aef45b34cec756bd3c104433652e5cfdd610a668b46ee2441f6d"
+    },
+    {
+      "name": "save_uploaded_vector",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 196,
+      "end_line": 211,
+      "reference_sha256": "099bb8b86ea5df1d9cac1d33acdc37ad5a8a3e00243205eaa0e418b200d3a221"
+    },
+    {
+      "name": "scene_geolocation",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 214,
+      "end_line": 219,
+      "reference_sha256": "5bb13cffce92adf07618aaaf7128aa14ea3ac356beb7b54bb3398f303a76f57d"
+    },
+    {
+      "name": "subset_lakes_to_scene",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 222,
+      "end_line": 232,
+      "reference_sha256": "d0da2b20a688881694042c04cbc2a941814a7f381819d57277f5358b2f0f5465"
+    },
+    {
+      "name": "erode_lake_geometries",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 235,
+      "end_line": 243,
+      "reference_sha256": "f17cb98be26d600bba21b11e46d1b3593a57aa10c493df68dbe82a1471f1b54b"
+    },
+    {
+      "name": "hydrolakes_point_mask",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 246,
+      "end_line": 259,
+      "reference_sha256": "d7431b797e799c90979f14ed38a3d8de565a92f2bed48f8a54f10edb7223209f"
+    },
+    {
+      "name": "selected_lake_bbox",
+      "module": "hydrolakes",
+      "cell": 29,
+      "line": 262,
+      "end_line": 268,
+      "reference_sha256": "97aed2d45ce5f1c3199f0844bff230006e4f94d7c30b9921e061d54776f7af59"
+    },
+    {
+      "name": "_scene_mask_context",
+      "module": "dense",
+      "cell": 30,
+      "line": 24,
+      "end_line": 129,
+      "reference_sha256": "16384f14181d9f72423e1b09869ab4abf42a02b143dde002c7bb393631194af3"
+    },
+    {
+      "name": "_target_crs",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 9,
+      "end_line": 17,
+      "reference_sha256": "36a3fc30c38a64aafb21e6ae4127a69c305a677975497033856792fc532cfa7f"
+    },
+    {
+      "name": "regular_area_definition",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 20,
+      "end_line": 64,
+      "reference_sha256": "30956e75b1730433ee6f417f8ed9a4e629c9e28dd39bcb8abc8c8a15a34ebe50"
+    },
+    {
+      "name": "_resample_nearest",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 67,
+      "end_line": 95,
+      "reference_sha256": "4b216efc255ee72c45c282ca504403047a1a1529c87c58f7308cc6b86c29089d"
+    },
+    {
+      "name": "_rgb_stretch",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 98,
+      "end_line": 113,
+      "reference_sha256": "d506258517a28d78ff722f68c081a3562d815a65fa9383f2865973c5b9bd7263"
+    },
+    {
+      "name": "regular_scene_raster",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 496,
+      "end_line": 508,
+      "reference_sha256": "5cf5b1aa37e647e306e2f4db1c88569035fd4463c677a8f255c8860f94fa3db6"
+    },
+    {
+      "name": "_project_lakes",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 162,
+      "end_line": 165,
+      "reference_sha256": "8745844c5292122c7d97fa9388259fab9a92c199ba67875354c3a2eb386bb640"
+    },
+    {
+      "name": "_add_scale_and_north",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 168,
+      "end_line": 183,
+      "reference_sha256": "4be1809fc4b3962a6d18265954947f61a98abb94ed0133e9068d9c4166913a38"
+    },
+    {
+      "name": "interactive_regular_map",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 666,
+      "end_line": 708,
+      "reference_sha256": "5485b823cb4d5d5a145ab61178c952e5100be32a0e24a6da9d67b9efbe4289d9"
+    },
+    {
+      "name": "write_regular_geotiff",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 299,
+      "end_line": 330,
+      "reference_sha256": "507e61c148862140acfe14b5b10fa62d8f7ae9e91ff8e5880907f22fe3c496fd"
+    },
+    {
+      "name": "analyze_lakes",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 383,
+      "end_line": 442,
+      "reference_sha256": "2b509c123329accaa3acce64a4e254fd1ae1e050aba67c0631fa4cecabdac386"
+    },
+    {
+      "name": "export_lake_statistics",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 445,
+      "end_line": 450,
+      "reference_sha256": "5a561da1b3f569ffd8df9d4b1e70095a79af2a1d0f34d4002cfe5afb82fba3da"
+    },
+    {
+      "name": "_native_scene_layer",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 468,
+      "end_line": 493,
+      "reference_sha256": "5bac93749551543c9555de3f42898d56175a9cd98d4b0eec19e24778782d6fb1"
+    },
+    {
+      "name": "_grid_lonlat_bounds",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 511,
+      "end_line": 516,
+      "reference_sha256": "045a5c96907fa22076085e245bcc7096a178c0b0a695e5028fbce1d2b962b782"
+    },
+    {
+      "name": "regular_geographic_raster",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 612,
+      "end_line": 640,
+      "reference_sha256": "00668a7444587f5496a1bdd3608a68b5154705bf3d770ab014ec529652e579af"
+    },
+    {
+      "name": "_folium_rgba",
+      "module": "legacy_maps",
+      "cell": 31,
+      "line": 643,
+      "end_line": 663,
+      "reference_sha256": "5b424759e1592ad91a9581427acbe0156709ca56acea31db0777ee3d1bd968ad"
+    },
+    {
+      "name": "_registry_connection",
+      "module": "registry",
+      "cell": 36,
+      "line": 4,
+      "end_line": 35,
+      "reference_sha256": "97d490da017abbde7ec8aa6fa23efdbd7a116560b05745faef916486afeb2fe6"
+    },
+    {
+      "name": "processing_config_hash",
+      "module": "registry",
+      "cell": 57,
+      "line": 49,
+      "end_line": 76,
+      "reference_sha256": "39417e6c3d5f5eeda0443d3f6fc5ae55981424bd19804b82fcc33af3db48b7d5"
+    },
+    {
+      "name": "registry_upsert_scene",
+      "module": "registry",
+      "cell": 36,
+      "line": 63,
+      "end_line": 87,
+      "reference_sha256": "e8e56cba9d742e6e286dcb12c10e7c93cc2baf11bb4c65ffd9f33dbcb091d204"
+    },
+    {
+      "name": "registry_update",
+      "module": "registry",
+      "cell": 36,
+      "line": 90,
+      "end_line": 99,
+      "reference_sha256": "91159d348991a2a402c09ba1925a5cbea2791fa87268bd8448207d04a57fce69"
+    },
+    {
+      "name": "registry_table",
+      "module": "registry",
+      "cell": 36,
+      "line": 102,
+      "end_line": 109,
+      "reference_sha256": "b0fbcb63280816234bad0646f1834d59d6a782a9c070ca5b9817896e39cd2a16"
+    },
+    {
+      "name": "registry_export_csv",
+      "module": "registry",
+      "cell": 36,
+      "line": 112,
+      "end_line": 115,
+      "reference_sha256": "03abd92b70517777cc8d79753351a60ff73538de8d979eca56412600910dfbc9"
+    },
+    {
+      "name": "_odata_scene",
+      "module": "catalogue",
+      "cell": 38,
+      "line": 4,
+      "end_line": 17,
+      "reference_sha256": "593d9bec0ba059986a1be747843a53a5f313dfe941a8eb459f3ca3182ddfeb36"
+    },
+    {
+      "name": "search_olci_l1_catalog",
+      "module": "catalogue",
+      "cell": 38,
+      "line": 20,
+      "end_line": 67,
+      "reference_sha256": "79c58cfc90e2ddf2d0382ac5270dfbb1f84257784c655b3feea872925d9e04d0"
+    },
+    {
+      "name": "scene_geometry",
+      "module": "catalogue",
+      "cell": 38,
+      "line": 70,
+      "end_line": 80,
+      "reference_sha256": "4a8e4acc13a2cce9e4cf1e80174a9c15900a750d478067d82bb00ebc4e15724f"
+    },
+    {
+      "name": "candidate_lakes_for_scene",
+      "module": "catalogue",
+      "cell": 38,
+      "line": 83,
+      "end_line": 94,
+      "reference_sha256": "51dfb6cb0184c4e98d967e44c50c9cc40d265e091494fe5b523a2308187eb1af"
+    },
+    {
+      "name": "save_target_lakes",
+      "module": "catalogue",
+      "cell": 38,
+      "line": 97,
+      "end_line": 100,
+      "reference_sha256": "376089cbe599d7749dc3164ff82eb2d96f999ca76a80a4801a7c0c3ff9c238b1"
+    },
+    {
+      "name": "plan_catalogue",
+      "module": "catalogue",
+      "cell": 38,
+      "line": 103,
+      "end_line": 127,
+      "reference_sha256": "89c1ea1c1e8c117bef98f4af57299a777aa1ca7b5c737d6e47151520da3e913a"
+    },
+    {
+      "name": "temporary_s3_client",
+      "module": "staging",
+      "cell": 40,
+      "line": 9,
+      "end_line": 36,
+      "reference_sha256": "694cce6bb5d3c51525976613e6ca2e641a4088598748b3381fede8c03fb912f4"
+    },
+    {
+      "name": "release_temporary_s3_credentials",
+      "module": "staging",
+      "cell": 40,
+      "line": 39,
+      "end_line": 52,
+      "reference_sha256": "1d9b0ea4e6c5d51c500abff7728b6fc2e3beb58eb307c59b6120eaa7c1af1c1d"
+    },
+    {
+      "name": "_split_s3_path",
+      "module": "staging",
+      "cell": 40,
+      "line": 55,
+      "end_line": 62,
+      "reference_sha256": "39ccac4c10ca082237707be313753628e8b160f0543e2d73c9762a280559bedd"
+    },
+    {
+      "name": "download_scene_s3_direct",
+      "module": "staging",
+      "cell": 40,
+      "line": 65,
+      "end_line": 102,
+      "reference_sha256": "cae881a8d84e8e0816597317833b6f1b5aa86c674510185d5ce3d4ba317d535f"
+    },
+    {
+      "name": "stage_scene_efficient",
+      "module": "staging",
+      "cell": 40,
+      "line": 105,
+      "end_line": 120,
+      "reference_sha256": "34e14d09c0d75aa712d52790f62f0c2e04ee6911dfd5862f29cac2cb6f7d20ac"
+    },
+    {
+      "name": "_expanded_lonlat_box",
+      "module": "windows",
+      "cell": 42,
+      "line": 4,
+      "end_line": 10,
+      "reference_sha256": "fb813d517632a1e7800118e3da98367910289d087dd4036128f0b9881851439f"
+    },
+    {
+      "name": "plan_scene_windows",
+      "module": "windows",
+      "cell": 42,
+      "line": 13,
+      "end_line": 45,
+      "reference_sha256": "eb8d6b595703d3f0e9987c0616df86d7c16b3b9a93a7ed988f023bb1baf729c9"
+    },
+    {
+      "name": "window_id",
+      "module": "windows",
+      "cell": 42,
+      "line": 48,
+      "end_line": 52,
+      "reference_sha256": "a58e90af320bffb5367abba06eb3a8f8505de428408afdda0098225a81d3455c"
+    },
+    {
+      "name": "lakes_for_window",
+      "module": "windows",
+      "cell": 42,
+      "line": 55,
+      "end_line": 59,
+      "reference_sha256": "2c3f7b12f354440f9fc97521dff68711e0622f78d77510fea637543c4cc38293"
+    },
+    {
+      "name": "_open_compact_writer",
+      "module": "compact",
+      "cell": 44,
+      "line": 4,
+      "end_line": 38,
+      "reference_sha256": "e3675706b613e6ce381f0e5b97991cf8857bac65c40686e4adb788c6491b767e"
+    },
+    {
+      "name": "_append_float",
+      "module": "compact",
+      "cell": 44,
+      "line": 41,
+      "end_line": 43,
+      "reference_sha256": "37a3acc685f5675987b3bf6cd452a91f28e632ef3921a907f3a03b3e1bc98e36"
+    },
+    {
+      "name": "_membership_block",
+      "module": "compact",
+      "cell": 44,
+      "line": 46,
+      "end_line": 76,
+      "reference_sha256": "f45367da0f6ad7a3f4f21e48411bde8d1059b98bd718b64bdbbfa1edf34805cf"
+    },
+    {
+      "name": "extract_lake_only_netcdf",
+      "module": "compact",
+      "cell": 57,
+      "line": 126,
+      "end_line": 281,
+      "reference_sha256": "2592c2837b65ae79a83bdb552275c0112fdbbd5d95c2e7e29652cbff9ba0befe"
+    },
+    {
+      "name": "compact_stats",
+      "module": "statistics",
+      "cell": 57,
+      "line": 288,
+      "end_line": 323,
+      "reference_sha256": "8fd36e61626660aef06dea463d64114c5d665901e233605a7f4737776962e2ec"
+    },
+    {
+      "name": "_scene_output_dir",
+      "module": "pipeline",
+      "cell": 48,
+      "line": 129,
+      "end_line": 139,
+      "reference_sha256": "1d7c6eb5bfb8dd5c801cbf3036e618471b95c158935c60fa8c2e85afaaa72b7a"
+    },
+    {
+      "name": "_cleanup_scene_scratch",
+      "module": "pipeline",
+      "cell": 46,
+      "line": 9,
+      "end_line": 23,
+      "reference_sha256": "043d9f41871a0b49bc79788b0540ea6d93c59b3acab909b951ffb1db6cbede14"
+    },
+    {
+      "name": "process_scene_once",
+      "module": "pipeline",
+      "cell": 46,
+      "line": 26,
+      "end_line": 127,
+      "reference_sha256": "78cf15d9a0d1e5e84f20aecce5b0692a6ebd3a0d381f3f7ad65e575b4224d058"
+    },
+    {
+      "name": "load_scene_from_registry",
+      "module": "pipeline",
+      "cell": 46,
+      "line": 130,
+      "end_line": 135,
+      "reference_sha256": "626f17d44db6d3670e2268034de4f7fb2669fc4ff6664e3156bd9f5c054046cd"
+    },
+    {
+      "name": "process_next_queued",
+      "module": "pipeline",
+      "cell": 46,
+      "line": 138,
+      "end_line": 167,
+      "reference_sha256": "07173b4c6339c6875bcbd88b050ae04947c43be8ac73a0ad00b324519f1986b4"
+    },
+    {
+      "name": "all_stats",
+      "module": "statistics",
+      "cell": 46,
+      "line": 170,
+      "end_line": 178,
+      "reference_sha256": "ee162025afc403700c0503f6a8a7f42ebd5972d8d57bb20b154fa8e87c6bc43a"
+    },
+    {
+      "name": "storage_summary",
+      "module": "pipeline",
+      "cell": 46,
+      "line": 181,
+      "end_line": 196,
+      "reference_sha256": "3d3d706d782844d82701dfb884f38e0192c9317758887d3ad2a74db97f5df0ce"
+    },
+    {
+      "name": "clear_scratch",
+      "module": "pipeline",
+      "cell": 46,
+      "line": 199,
+      "end_line": 203,
+      "reference_sha256": "40a2bffdbf608841a13aa9256eb876d73416cdd6db440a0acd64b40b54649c62"
+    },
+    {
+      "name": "_spectral_line_height",
+      "module": "science",
+      "cell": 48,
+      "line": 11,
+      "end_line": 16,
+      "reference_sha256": "48c2b30877ceb28bcc96bcdadc7144cf5f9e56758d1dff7317279b34ac0719a6"
+    },
+    {
+      "name": "additional_olci_indices",
+      "module": "science",
+      "cell": 48,
+      "line": 19,
+      "end_line": 56,
+      "reference_sha256": "d7bd8b509d058d27dcf69e31a45b6a44883f00d5a1aaf6667820ff550d76f319"
+    },
+    {
+      "name": "_l2gen_rhos_product_name",
+      "module": "l2gen",
+      "cell": 48,
+      "line": 66,
+      "end_line": 67,
+      "reference_sha256": "34e5b1a5ebec3a406d7c0c4c912e6ee90e9a485472f4a595a39fb9e05f845880"
+    },
+    {
+      "name": "parse_s3_frame_metadata",
+      "module": "registry",
+      "cell": 48,
+      "line": 116,
+      "end_line": 127,
+      "reference_sha256": "9fcab81d9d813ff0cb5dbba2a173989b646ba32e6e269870b0a3613be1f8ebd3"
+    },
+    {
+      "name": "_open_compact_writer_v22",
+      "module": "compact",
+      "cell": 48,
+      "line": 142,
+      "end_line": 176,
+      "reference_sha256": "abde429c7587a31dca3b208d1890c975b8936febd7b4ac498d63d57f688cee54"
+    },
+    {
+      "name": "_app_status",
+      "module": "ui_helpers",
+      "cell": 50,
+      "line": 60,
+      "end_line": 62,
+      "reference_sha256": "e4df411c606a4f866d02a96b1bdc1e4566588c9a32aa60cfd38a86b9b73e549a"
+    },
+    {
+      "name": "_safe_admin_slug",
+      "module": "admin",
+      "cell": 50,
+      "line": 65,
+      "end_line": 67,
+      "reference_sha256": "06a8b4792398c9df9c20a6f518263389cf8771267039a66c55b58cc15c2e66f5"
+    },
+    {
+      "name": "_adm1_name_column",
+      "module": "admin",
+      "cell": 50,
+      "line": 70,
+      "end_line": 78,
+      "reference_sha256": "d40152501cd90679967aba4015bd16056b77463d3064af237f0e10a0016db118"
+    },
+    {
+      "name": "_load_geoboundaries_adm1",
+      "module": "admin",
+      "cell": 50,
+      "line": 81,
+      "end_line": 127,
+      "reference_sha256": "aae81e698f1810b91cca0a40866a37fc734e220ac02f7201e3dca2ab9b54300d"
+    },
+    {
+      "name": "load_adm1_callback",
+      "module": "admin",
+      "cell": 50,
+      "line": 130,
+      "end_line": 143,
+      "reference_sha256": "058465048bd31edacb2ce574ade1008e663ab7a1aadfeab9c2faf56c085dcc04"
+    },
+    {
+      "name": "_selected_adm1_geometry",
+      "module": "admin",
+      "cell": 50,
+      "line": 146,
+      "end_line": 162,
+      "reference_sha256": "ce300c05588a19566dbb79d21138849c25f0ee1cee489e142e24e952538d45a3"
+    },
+    {
+      "name": "_lakes_intersecting_geometry",
+      "module": "admin",
+      "cell": 50,
+      "line": 165,
+      "end_line": 175,
+      "reference_sha256": "0628f3d4ff932a3cad4e8938358ee49893c14e9e98cc911a27663e524b9c94ff"
+    },
+    {
+      "name": "_plan_catalogue_shard",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 178,
+      "end_line": 217,
+      "reference_sha256": "ae7ccfea3e7ec161dba3b103e8e7dfe4945b9046bb8f83dfc4d269ba367b6813"
+    },
+    {
+      "name": "_parse_bbox",
+      "module": "ui_helpers",
+      "cell": 50,
+      "line": 220,
+      "end_line": 225,
+      "reference_sha256": "6e65883612c3efb28a8c5c457c75efe32408592ac5d695cab9ca3b811369500d"
+    },
+    {
+      "name": "_load_target_lakes_if_needed",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 228,
+      "end_line": 232,
+      "reference_sha256": "e6958d597813425c02c47a4b13d7fcc278d310d21090e1d29834668c64e49365"
+    },
+    {
+      "name": "load_lakes_callback",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 235,
+      "end_line": 252,
+      "reference_sha256": "a57530b31afb03aecfb73bf644bff7d47ae712366c31379e5931eee4cb528cdf"
+    },
+    {
+      "name": "_queue_view",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 255,
+      "end_line": 261,
+      "reference_sha256": "348348feb611f4b737884dc4740778e1ce6073829b42b2d240ae207130833614"
+    },
+    {
+      "name": "plan_callback",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 264,
+      "end_line": 294,
+      "reference_sha256": "32889554bbc8b371cab9896795402c5e94a016f585da3abcf71cb0642907f429"
+    },
+    {
+      "name": "_current_plan_table",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 297,
+      "end_line": 303,
+      "reference_sha256": "db151b21edea5105fe0ad42b602e9f5ad00083d9bab0d35adef3d08011c6370c"
+    },
+    {
+      "name": "refresh_queue_callback",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 306,
+      "end_line": 309,
+      "reference_sha256": "8d79adbf7e8aca87d0072c2f34f48992ade27a0b5260f477f64d2f339b2188d8"
+    },
+    {
+      "name": "run_batch_callback",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 312,
+      "end_line": 321,
+      "reference_sha256": "bfb53144869ed2890d0f05a8dee54143aac683a78d9764bb2b91bad8fc3f60b2"
+    },
+    {
+      "name": "_stats",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 324,
+      "end_line": 324,
+      "reference_sha256": "a5cb6ca74e2f5ca921df1ee555c6fffdbf2ed6bf652084a5354f006b8733de03"
+    },
+    {
+      "name": "_lake_choices",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 326,
+      "end_line": 330,
+      "reference_sha256": "f525f10f4188e33886818f3dc9e33164455b2405d46e23e09af2ed21e14b560d"
+    },
+    {
+      "name": "refresh_lakes_callback",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 333,
+      "end_line": 334,
+      "reference_sha256": "0ef7e3bbc743ca71129e82e8c87e7f9d9c39681c1b522b43a3ae117367f34c1e"
+    },
+    {
+      "name": "lake_timeseries_callback",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 337,
+      "end_line": 343,
+      "reference_sha256": "ac0048517c11480983ca02101a8c1f8dc59f925a31654429d81a5ae1fd8f660c"
+    },
+    {
+      "name": "_scene_choices",
+      "module": "archive",
+      "cell": 50,
+      "line": 346,
+      "end_line": 350,
+      "reference_sha256": "54b2a29df6641d1e51b797a652c8503d2c8b14089606e0943d42b7a1067562c6"
+    },
+    {
+      "name": "refresh_scene_choices_callback",
+      "module": "archive",
+      "cell": 58,
+      "line": 39,
+      "end_line": 50,
+      "reference_sha256": "a6c31582691cb1a6cb5c71d7c276d59d57e2ee6edf6e73503248f70da8c5b5c1"
+    },
+    {
+      "name": "_scene_lake_update",
+      "module": "archive",
+      "cell": 58,
+      "line": 16,
+      "end_line": 32,
+      "reference_sha256": "8d4b33c4930c488352f51deb9e42f255592f49391cd28b8afe9090885e1ed1a8"
+    },
+    {
+      "name": "scene_changed_callback",
+      "module": "archive",
+      "cell": 58,
+      "line": 35,
+      "end_line": 36,
+      "reference_sha256": "02798fc281f854a4ca4fed135528f45755792b01a654e9e501a2f745c7c92ac2"
+    },
+    {
+      "name": "_scene_compact_files",
+      "module": "archive",
+      "cell": 50,
+      "line": 371,
+      "end_line": 380,
+      "reference_sha256": "23245f217dd7b87a586390bd400205bc06292e7f9703b85b088774d9d02ffd44"
+    },
+    {
+      "name": "_load_scene_pixels",
+      "module": "archive",
+      "cell": 57,
+      "line": 326,
+      "end_line": 352,
+      "reference_sha256": "5a600daf1efbd45bdc8a9dc860a07b5b09a5933fd8c9d235c4f371dc53dd4c74"
+    },
+    {
+      "name": "_grid_geometry_mercator",
+      "module": "mapping",
+      "cell": 58,
+      "line": 69,
+      "end_line": 101,
+      "reference_sha256": "07fe324d22f9d8dd097e6fcd38f67cdbe467f7d90826939485028496b9e1a4dc"
+    },
+    {
+      "name": "_regularize_dataframe_mercator",
+      "module": "mapping",
+      "cell": 59,
+      "line": 177,
+      "end_line": 191,
+      "reference_sha256": "e074eabf84d05a21658c1fd554574d6d86c5b5b90021cfa6f42f5ac80bb3b001"
+    },
+    {
+      "name": "_grid_geometry_geographic",
+      "module": "mapping",
+      "cell": 50,
+      "line": 448,
+      "end_line": 464,
+      "reference_sha256": "1fce9ab88a52f6ece6762b246ba004f1e6cf04291ab8580c5e51c9158b88a6fe"
+    },
+    {
+      "name": "_regularize_dataframe_geographic",
+      "module": "mapping",
+      "cell": 59,
+      "line": 112,
+      "end_line": 130,
+      "reference_sha256": "26716834e2ee660f60c25ffb9baa21a977272f6e6ab0c94abd9cab2f0d1b4672"
+    },
+    {
+      "name": "_regularize_dataframe",
+      "module": "mapping",
+      "cell": 50,
+      "line": 480,
+      "end_line": 481,
+      "reference_sha256": "03133d7dcdfbfca36525ed0c4495097a20bf9ac520fd104a749896baaf8892a4"
+    },
+    {
+      "name": "_auto_limits",
+      "module": "mapping",
+      "cell": 50,
+      "line": 484,
+      "end_line": 492,
+      "reference_sha256": "a661e2af95eb43d36b3f13b3c0a88d01e33954e37516e6eefd739c0e52e8e340"
+    },
+    {
+      "name": "_optional_float",
+      "module": "mapping",
+      "cell": 50,
+      "line": 495,
+      "end_line": 496,
+      "reference_sha256": "9c770d4328c6b67074cff98a4f93de71b555123199a5ab3d7ddb05a87eb71fa0"
+    },
+    {
+      "name": "_rgba_data_url",
+      "module": "mapping",
+      "cell": 50,
+      "line": 499,
+      "end_line": 503,
+      "reference_sha256": "c29c45122edcb3958a5e61fd2663d0b5418904a4be7233817f2efb8434c47d89"
+    },
+    {
+      "name": "_truecolor_data_url",
+      "module": "mapping",
+      "cell": 50,
+      "line": 506,
+      "end_line": 512,
+      "reference_sha256": "b243a2ed3d2f75674ecb1c9479be858ad4a38983b67346e8c2c4499fc43a38d8"
+    },
+    {
+      "name": "_cmap_gradient_css",
+      "module": "mapping",
+      "cell": 50,
+      "line": 515,
+      "end_line": 519,
+      "reference_sha256": "73a63ab24249e4bd8a415c8e00db27256131a9ccb83bfb863df2cfdc57327241"
+    },
+    {
+      "name": "_add_basemap",
+      "module": "mapping",
+      "cell": 50,
+      "line": 522,
+      "end_line": 528,
+      "reference_sha256": "fb2d5514c85ec462abb5134fe71fcd7d0a627f5ad788051ac065ad053cd996cf"
+    },
+    {
+      "name": "_lake_boundaries_for_ids",
+      "module": "archive",
+      "cell": 50,
+      "line": 531,
+      "end_line": 534,
+      "reference_sha256": "d717c734532e4c58234d4db56e48feed8be0bc364377841dd8f8a40dc0244de1"
+    },
+    {
+      "name": "_add_scalar_legend",
+      "module": "mapping",
+      "cell": 50,
+      "line": 537,
+      "end_line": 538,
+      "reference_sha256": "1c4ab734a6cc6982ab60120b952e60f63817badcb227074f58c2b47eed3d5178"
+    },
+    {
+      "name": "_hover_payload",
+      "module": "mapping",
+      "cell": 50,
+      "line": 541,
+      "end_line": 571,
+      "reference_sha256": "0ca3f0ec8f6bef0cc9799c7a4aa8c1b1640fdc68ee688199efcf509c3227daf2"
+    },
+    {
+      "name": "_inject_hover_js",
+      "module": "mapping",
+      "cell": 50,
+      "line": 575,
+      "end_line": 599,
+      "reference_sha256": "b04452047dc122d40576e6d39cebf6e8dd4bb206ebbf35651fcc490801103c05"
+    },
+    {
+      "name": "_build_map",
+      "module": "mapping",
+      "cell": 59,
+      "line": 194,
+      "end_line": 223,
+      "reference_sha256": "fd6bc2768b5143a0ffe3c752248865a4cec404e9c481273f20cd2284f95b88f7"
+    },
+    {
+      "name": "export_snap_gridded_netcdf",
+      "module": "exports",
+      "cell": 59,
+      "line": 226,
+      "end_line": 254,
+      "reference_sha256": "b9e72fd924f7be1ff67d634978e5e4132d595f25c1c42bfb9f5ae0ba7bafaacd"
+    },
+    {
+      "name": "_science_grid_setup",
+      "module": "exports",
+      "cell": 50,
+      "line": 668,
+      "end_line": 676,
+      "reference_sha256": "5f30e062549324d27ba25471ea2f3669aa0ed879336afdde9959a4e30023288a"
+    },
+    {
+      "name": "_mean_grid_from_flat",
+      "module": "exports",
+      "cell": 50,
+      "line": 679,
+      "end_line": 688,
+      "reference_sha256": "bd80d4f987ac204279989163d1897c3c6f06aca9184dc9255287b1ecf86a9375"
+    },
+    {
+      "name": "_mask_grid_from_flat",
+      "module": "exports",
+      "cell": 50,
+      "line": 691,
+      "end_line": 697,
+      "reference_sha256": "9acdec67dd5c7f6ffd179e08fc7251047720fba22200b191bd021dbf37dacc9f"
+    },
+    {
+      "name": "export_complete_scene_science_netcdf",
+      "module": "exports",
+      "cell": 59,
+      "line": 257,
+      "end_line": 296,
+      "reference_sha256": "2f98a211ccd8f9a87c80f64404158c8bf9599fbde1e5abd9c35203285d348729"
+    },
+    {
+      "name": "_inject_all_science_hover_js",
+      "module": "mapping",
+      "cell": 50,
+      "line": 791,
+      "end_line": 810,
+      "reference_sha256": "b865a41cb0c759c909a4bf80a50183047f6e53d1ef373deb1179fc04c880dd7e"
+    },
+    {
+      "name": "create_complete_scene_html",
+      "module": "mapping",
+      "cell": 59,
+      "line": 338,
+      "end_line": 354,
+      "reference_sha256": "c435acb5dacc7574c7d64400533c0c71c3c12b587a9592a8b947b5baeb767718"
+    },
+    {
+      "name": "_compact_download",
+      "module": "archive",
+      "cell": 50,
+      "line": 842,
+      "end_line": 849,
+      "reference_sha256": "79a796431226056c234937f4a231c527c92b79e11fcfc5e5e5358e4b9b6f922c"
+    },
+    {
+      "name": "map_callback",
+      "module": "mapping",
+      "cell": 58,
+      "line": 281,
+      "end_line": 293,
+      "reference_sha256": "cadafb4dd195a217f5541c1038358508a6dd02b6a4dfb65b5156a5c6747d926f"
+    },
+    {
+      "name": "_grid_label",
+      "module": "archive",
+      "cell": 50,
+      "line": 864,
+      "end_line": 865,
+      "reference_sha256": "3c06ae0254fd84d4938938c26bb285f354704997c87a995d306ad98e40f0a78b"
+    },
+    {
+      "name": "grid_id_to_bbox",
+      "module": "archive",
+      "cell": 50,
+      "line": 867,
+      "end_line": 871,
+      "reference_sha256": "7e71e1cb6cfba557f8eb1149b4b4090267a5ad3914bbbf80c576beb3dc07eacd"
+    },
+    {
+      "name": "scene_grid_ids",
+      "module": "archive",
+      "cell": 50,
+      "line": 873,
+      "end_line": 885,
+      "reference_sha256": "4a7f0337c5982a70fe6af30529d7bae2f0dd0efb7e049413f661a6a373c54908"
+    },
+    {
+      "name": "build_archive_index",
+      "module": "archive",
+      "cell": 50,
+      "line": 887,
+      "end_line": 908,
+      "reference_sha256": "22fe764399aa08dbdd7d1c8bb6d84d80e9978acd5366d60d02f0b863e0bc941a"
+    },
+    {
+      "name": "archive_refresh_callback",
+      "module": "archive",
+      "cell": 50,
+      "line": 910,
+      "end_line": 917,
+      "reference_sha256": "08f2db0f0bf865747242b6c9415017c02cf4ab132b065074bd0c2e45d9cb82d7"
+    },
+    {
+      "name": "create_scene_share_bundle",
+      "module": "exports",
+      "cell": 59,
+      "line": 325,
+      "end_line": 335,
+      "reference_sha256": "82bcc4baa17aeed1bb708524b5c262cb7bfe3445514013a1083cc1c9c7142666"
+    },
+    {
+      "name": "bundle_callback",
+      "module": "exports",
+      "cell": 55,
+      "line": 579,
+      "end_line": 583,
+      "reference_sha256": "228bab6b1faef8a02b9ae42446564bde99771e0173a896ddc77b212eebade47b"
+    },
+    {
+      "name": "scene_spectrum_callback",
+      "module": "spectra",
+      "cell": 50,
+      "line": 965,
+      "end_line": 977,
+      "reference_sha256": "4e5e3798bd2898c3cb13b4926b70b57133b18fffbe7f24d56e4c097f3511e718"
+    },
+    {
+      "name": "_spectrum_points_frame",
+      "module": "spectra",
+      "cell": 50,
+      "line": 982,
+      "end_line": 996,
+      "reference_sha256": "a0de8fc4cde1e5f8edb4251a05a381f8b33b2f4a534d58f01f8317028ad8f028"
+    },
+    {
+      "name": "add_spectrum_point_callback",
+      "module": "spectra",
+      "cell": 50,
+      "line": 999,
+      "end_line": 1004,
+      "reference_sha256": "9a39349b51b95968a78898b7f7b8f489672772ffcedbca96152722530e508646"
+    },
+    {
+      "name": "clear_spectrum_points_callback",
+      "module": "spectra",
+      "cell": 50,
+      "line": 1007,
+      "end_line": 1008,
+      "reference_sha256": "c92b45c587b0f28a5c32c468af0d894d47ce8d9a280fe3d56f7ea1b337543205"
+    },
+    {
+      "name": "_unit_sphere_xyz",
+      "module": "science",
+      "cell": 50,
+      "line": 1011,
+      "end_line": 1013,
+      "reference_sha256": "7a52eada3c5f38f7e51fcf72748f4770aae3c80739acdd831615a9b48185a857"
+    },
+    {
+      "name": "coordinate_spectra_callback",
+      "module": "spectra",
+      "cell": 50,
+      "line": 1016,
+      "end_line": 1040,
+      "reference_sha256": "5017706e8b8cff59deea695182b7e1484d0a4213dd95de9671a7768f4ec2d61d"
+    },
+    {
+      "name": "_scene_utc_date_global",
+      "module": "comparison",
+      "cell": 50,
+      "line": 1044,
+      "end_line": 1049,
+      "reference_sha256": "fa7cc75d8672b5d79950a90eca306b06d022459f35527c5f106236db571f37f2"
+    },
+    {
+      "name": "_obpg_filename_global",
+      "module": "comparison",
+      "cell": 50,
+      "line": 1052,
+      "end_line": 1053,
+      "reference_sha256": "9081ee4d751b43295bffb554db3a90d23c7fecb462c3d82d16e3284bc02b129f"
+    },
+    {
+      "name": "_download_obpg_cyano_global",
+      "module": "comparison",
+      "cell": 50,
+      "line": 1056,
+      "end_line": 1082,
+      "reference_sha256": "d9cf855adadb7c8dd735dc7ac6143a11a79c0a5151f2548491a5b2ece09203b8"
+    },
+    {
+      "name": "_obpg_ci_from_dn_global",
+      "module": "comparison",
+      "cell": 50,
+      "line": 1085,
+      "end_line": 1086,
+      "reference_sha256": "4b3e3c7f7cafa16ca5999f5c0a064f5065769ea821e005137d9ba89c91b8a24d"
+    },
+    {
+      "name": "_selected_target_lake",
+      "module": "comparison",
+      "cell": 50,
+      "line": 1089,
+      "end_line": 1092,
+      "reference_sha256": "241eca32e82dd57b954f8246abb55f6e1783778d439f7af0fc045fd7bb4f87c4"
+    },
+    {
+      "name": "_obpg_lake_window_global",
+      "module": "comparison",
+      "cell": 50,
+      "line": 1095,
+      "end_line": 1104,
+      "reference_sha256": "1310c12af7fa61880fb6b78d294e994ccda590ed88c6ed3b92290f9ccac90ce5"
+    },
+    {
+      "name": "_cyan_metrics",
+      "module": "comparison",
+      "cell": 50,
+      "line": 1107,
+      "end_line": 1114,
+      "reference_sha256": "ace97baf686c51324898b6db49fef9b63e69d47e208a937d02570132b34a9b1f"
+    },
+    {
+      "name": "prepare_cyan_source_callback",
+      "module": "comparison",
+      "cell": 50,
+      "line": 1117,
+      "end_line": 1128,
+      "reference_sha256": "2fa5d0d97a98e9038dd74585d00543b7b1ea53d9e221f067e454638d7062d01e"
+    },
+    {
+      "name": "compare_cyan_callback",
+      "module": "comparison",
+      "cell": 50,
+      "line": 1131,
+      "end_line": 1160,
+      "reference_sha256": "af19c916cb02d06090e96e79ab6f9852664bb4fe997a9053f1946d34306929d6"
+    },
+    {
+      "name": "storage_callback",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 1163,
+      "end_line": 1163,
+      "reference_sha256": "14bb04434ab6ad028a3bf3d15497ac19cd1c0d94fd9a23803c16e83b115ac5b5"
+    },
+    {
+      "name": "clear_scratch_callback",
+      "module": "callbacks",
+      "cell": 50,
+      "line": 1164,
+      "end_line": 1166,
+      "reference_sha256": "1da677afaba3bb40290eafbed583142629ea6fdd8c5ed9f56652870995554f11"
+    },
+    {
+      "name": "_compact_qa_metadata",
+      "module": "archive",
+      "cell": 57,
+      "line": 417,
+      "end_line": 433,
+      "reference_sha256": "bcebce9390f21710bcf1b267c94a04ec5f2aea085fa35ae4e2c2ac7165e5a83f"
+    },
+    {
+      "name": "_science_sinusoidal_setup",
+      "module": "exports",
+      "cell": 57,
+      "line": 436,
+      "end_line": 450,
+      "reference_sha256": "54449cd0d531ce4aa2b6b03170bf32fb7067ea13ed35a847a27256275c34e055"
+    },
+    {
+      "name": "_binned_mask_grid",
+      "module": "exports",
+      "cell": 55,
+      "line": 137,
+      "end_line": 146,
+      "reference_sha256": "78b16e2b228954db892da2030524d8c8f1191876d4f33d46e5dac6dbb8db7162"
+    },
+    {
+      "name": "_share_all_index_stats",
+      "module": "exports",
+      "cell": 59,
+      "line": 299,
+      "end_line": 322,
+      "reference_sha256": "0efd4fe8e5e391351a3d65ff4042e8b1d2853d4f38d4217cbe96eb8bd061a0b0"
+    },
+    {
+      "name": "_open_compact_writer_v264",
+      "module": "compact",
+      "cell": 57,
+      "line": 79,
+      "end_line": 123,
+      "reference_sha256": "a355fdafe97e484ed335169f4dec6c7054435c18dd6f4a3940b9750aa95eb57c"
+    },
+    {
+      "name": "_mask_values_from_ds",
+      "module": "statistics",
+      "cell": 57,
+      "line": 284,
+      "end_line": 285,
+      "reference_sha256": "c8f212ebcce2eeaf9026730ef90f5c160cf9fed47947c47b0e7bd0200f83dfae"
+    },
+    {
+      "name": "_primary_selector",
+      "module": "quality",
+      "cell": 57,
+      "line": 355,
+      "end_line": 358,
+      "reference_sha256": "88a764794f9a39d2fa54dd7734b4945b3d0c20a3a99d254d8f7b8759f528c545"
+    },
+    {
+      "name": "_cyan_comparison_selector",
+      "module": "quality",
+      "cell": 57,
+      "line": 361,
+      "end_line": 364,
+      "reference_sha256": "b4a62fb6c03c5c30e9abf5ac7b35029507009c016ea0fb96ba274c014c358e53"
+    },
+    {
+      "name": "_masked_display_frame",
+      "module": "quality",
+      "cell": 57,
+      "line": 367,
+      "end_line": 373,
+      "reference_sha256": "ac668a981617dd58ec8f504751501a34ca300e893b14472be04d8c2c57b162bd"
+    },
+    {
+      "name": "_unique_bin_index",
+      "module": "exports",
+      "cell": 57,
+      "line": 453,
+      "end_line": 454,
+      "reference_sha256": "8bfd6dca86f7b0fc8f923e38c353b34d828bc59c8c232328f14c1d3b2e02da1d"
+    },
+    {
+      "name": "_aggregate_mean_to_unique",
+      "module": "exports",
+      "cell": 57,
+      "line": 457,
+      "end_line": 463,
+      "reference_sha256": "6bfd6a7f57b02c455d426b5e00026fe8551d30ddf79054ed9d4aa73542ab3ddb"
+    },
+    {
+      "name": "_aggregate_mask_to_unique",
+      "module": "exports",
+      "cell": 57,
+      "line": 466,
+      "end_line": 469,
+      "reference_sha256": "d0bac19efd5a2c81bbf9569cd15a68d0d21695620787bb53d10ff14134d6513e"
+    },
+    {
+      "name": "_chunk_groups",
+      "module": "exports",
+      "cell": 57,
+      "line": 472,
+      "end_line": 475,
+      "reference_sha256": "c98cd3c399bb1284f8fb137c4c2692550ca9dc1b575de52b3fb2039b1ea0a5cc"
+    },
+    {
+      "name": "_write_sparse_float",
+      "module": "exports",
+      "cell": 57,
+      "line": 478,
+      "end_line": 483,
+      "reference_sha256": "d5784c7c8674f0f4ffb5e811258d596b3807c0623531cf2fb8b54103f50225af"
+    },
+    {
+      "name": "_write_sparse_mask",
+      "module": "exports",
+      "cell": 57,
+      "line": 486,
+      "end_line": 489,
+      "reference_sha256": "13df7833070eaf5b0575eab564f128cce6358bbc514e7bd36b2dbcb14f87220d"
+    },
+    {
+      "name": "_write_sparse_int",
+      "module": "exports",
+      "cell": 57,
+      "line": 493,
+      "end_line": 499,
+      "reference_sha256": "a3c7308b91500301e90758a6dcdfc9581659b451cb371ada7bbce0dc77a2196a"
+    },
+    {
+      "name": "_planning_geometry_frame",
+      "module": "mapping",
+      "cell": 58,
+      "line": 53,
+      "end_line": 66,
+      "reference_sha256": "546877a2bc103afc167aed75556612535ecf97f8ab0dad818651f2a7f91464a6"
+    },
+    {
+      "name": "_science_geographic_setup_v265",
+      "module": "mapping",
+      "cell": 58,
+      "line": 296,
+      "end_line": 321,
+      "reference_sha256": "7c02c5f655982913617d0f37688549614c0b23bbf4c02bce8b921ed005f13381"
+    },
+    {
+      "name": "_scene_lake_union",
+      "module": "mapping",
+      "cell": 58,
+      "line": 324,
+      "end_line": 332,
+      "reference_sha256": "8d61a7d6015b7160dd0cd1aa3580f971768fbb9430a2dda00a815b926a49dcdf"
+    },
+    {
+      "name": "_candidate_geographic_chunks",
+      "module": "mapping",
+      "cell": 58,
+      "line": 335,
+      "end_line": 353,
+      "reference_sha256": "dd1df389c63536454bc81a330a0e019b4f813b7b9ffc82f418f5b7332c9b5305"
+    },
+    {
+      "name": "_spectrum_map_image",
+      "module": "spectra",
+      "cell": 58,
+      "line": 516,
+      "end_line": 565,
+      "reference_sha256": "fdeb6a6e48642af004764d6fc200632f639aeec0d4c0d009ea92bf25968c200c"
+    },
+    {
+      "name": "spectrum_map_refresh_callback",
+      "module": "spectra",
+      "cell": 58,
+      "line": 568,
+      "end_line": 573,
+      "reference_sha256": "72b5e75f0395c09c54e8d6f67a1816cc5cb8ee0c9b6dbbdc80251c86ba673482"
+    },
+    {
+      "name": "coordinate_spectra_with_map_callback",
+      "module": "spectra",
+      "cell": 58,
+      "line": 576,
+      "end_line": 582,
+      "reference_sha256": "22367b20deb58e9702552bbe2059773472f8bcf81f61431f3cd5598382c51363"
+    },
+    {
+      "name": "clear_spectrum_points_and_map_callback",
+      "module": "spectra",
+      "cell": 58,
+      "line": 585,
+      "end_line": 591,
+      "reference_sha256": "b8f2e37e01d4cbf3f77f39fd5f605599dce5a995db59cd860f961ba15f32e8ff"
+    },
+    {
+      "name": "spectrum_map_click_callback",
+      "module": "spectra",
+      "cell": 58,
+      "line": 594,
+      "end_line": 614,
+      "reference_sha256": "6782b1a506d58332343582759b5c74fba493c0e9d8882d072de47d6249aa7056"
+    },
+    {
+      "name": "_cyan_metrics_v265",
+      "module": "comparison",
+      "cell": 58,
+      "line": 617,
+      "end_line": 629,
+      "reference_sha256": "08a6a965889f42721e2a3dc7fd5fce7e9dbff38bfabccb66ed542f88d9a75dcc"
+    },
+    {
+      "name": "compare_cyan_callback_v265",
+      "module": "comparison",
+      "cell": 60,
+      "line": 19,
+      "end_line": 453,
+      "reference_sha256": "c77915363ce88ec314845e8ed1783d26bf569a404c452263f62340f48b5caca9"
+    },
+    {
+      "name": "_scene_analysis_lakes_v267",
+      "module": "mapping",
+      "cell": 59,
+      "line": 15,
+      "end_line": 43,
+      "reference_sha256": "eb91fb7606bffb3a65fdf04b41655f2063c4ede56119462b491cb050fd337d3c"
+    },
+    {
+      "name": "_dedupe_target_assignments_v267",
+      "module": "mapping",
+      "cell": 59,
+      "line": 46,
+      "end_line": 59,
+      "reference_sha256": "4fa8a4aa4ae2268b625af3359bf2ebfda39046321ea164168c0b0c56e4bd2ae2"
+    },
+    {
+      "name": "_native_assignments_geographic_v267",
+      "module": "mapping",
+      "cell": 59,
+      "line": 62,
+      "end_line": 109,
+      "reference_sha256": "75ca62daa1415ceafe2be9f4c07596d90316d51dda8deb7486bc886670a4cfe8"
+    },
+    {
+      "name": "_native_assignments_mercator_v267",
+      "module": "mapping",
+      "cell": 59,
+      "line": 133,
+      "end_line": 174,
+      "reference_sha256": "d24d98af2369227d89b4230d5e2b62f704572ca29b91c95e42b968ea73ffeb8f"
+    },
+    {
+      "name": "_BASE_VALIDATE_L2_FILE_V5",
+      "module": "l2gen",
+      "cell": 17,
+      "line": 186,
+      "end_line": 225,
+      "reference_sha256": "62a60e27dc558eed9e456a3dc291393fa94e267432691ac668c6f31d539ae71b"
+    }
+  ],
+  "superseded_definitions": 50,
+  "conversion": "Ordinary Python modules with explicit imports; effective final definitions; no runtime parsing or execution of a notebook."
+}

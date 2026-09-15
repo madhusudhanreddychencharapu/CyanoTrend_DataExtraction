@@ -1,0 +1,28 @@
+# Relative paths are resolved from this file's directory.
+[paths]
+persistent_root = "../data"
+scratch_root = "../scratch"
+ocssw_root = "~/ocssw"
+
+[processing]
+l2_mode = "full_swath_rhos"
+ndci_source = "rhos"
+get_ancillary = true
+allow_climatology_fallback = false
+strategy = "adaptive_lake_windows"
+window_margin_km = 3.0
+max_windows = 6
+full_scene_fraction_threshold = 0.35
+shore_buffer_m = 0.0
+rows_per_block = 256
+
+[storage]
+download_method = "auto"
+keep_staged_l1 = false
+keep_raw_zip = false
+keep_l2 = false
+keep_failed_scratch = true
+
+[lakes]
+min_area_km2 = 10.0
+region = "WORLD"
