@@ -34,6 +34,20 @@ Native lake observations are the numerical source for statistics. Mapped grids a
 
 The command line supports setup, planning, bounded sequential batches, resume, local inputs, existing L2 ingestion, diagnostics, archive inspection, share bundles, HTML maps, and NASA comparison. The complete Gradio dashboard retains ADM1/bbox/grid planning, map controls, spectra sampling, archive downloads, and comparison diagnostics.
 
+For backend-only use, start with the discoverability commands before processing:
+
+```bash
+python -m cyanolake --config config/local.toml guide
+python -m cyanolake --config config/local.toml list-regions
+python -m cyanolake --config config/local.toml list-admin --country USA
+```
+
+Use readable state/province names in planning when possible:
+
+```bash
+python -m cyanolake --config config/local.toml plan --start 2024-07-01 --end 2024-07-01 --country USA --admin-name Georgia --max-products 3
+```
+
 The three-file share ZIP contains a complete science NetCDF, all-index native statistics CSV, and metadata JSON. The package preserves the nine-band production archive and its final bloom-aware QA behavior.
 
 **Validation boundary:** local synthetic tests verify the implemented behavior. An authenticated real-scene L2Gen run and numerical comparison against the reference's real outputs are still required before calling a deployment scientifically validated.

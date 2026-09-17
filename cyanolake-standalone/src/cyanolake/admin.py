@@ -16,6 +16,17 @@ from . import settings as _m_settings
 from . import state as _m_state
 from . import ui_helpers as _m_ui_helpers
 
+LAKE_REGION_OPTIONS = (
+    "WORLD",
+    "USA",
+    "Africa",
+    "Asia",
+    "Europe",
+    "North America",
+    "South America",
+    "Oceania",
+)
+
 
 # Reference cell 50, lines 65-67.
 def _safe_admin_slug(text):
@@ -68,6 +79,7 @@ def _load_geoboundaries_adm1(iso3):
         raise RuntimeError(f"ADM1 boundary file for {iso3} contains no usable geometries")
     name_col = _adm1_name_column(gdf)
     lookup = {}
+    labels = {}
     choices = []
     for idx, row in gdf.iterrows():
         name = str(row.get(name_col, f"ADM1 {idx + 1}") or f"ADM1 {idx + 1}")
@@ -80,9 +92,26 @@ def _load_geoboundaries_adm1(iso3):
         key = f"{idx}:{shape_id}"
         label = f"{name} ({code})" if code and code.lower() != "nan" else name
         lookup[key] = int(idx)
+        labels[key] = label
         choices.append((label, key))
-    _m_state.ADM1_STATE.update(country_iso3=iso3, gdf=gdf, lookup=lookup, metadata=metadata)
+    _m_state.ADM1_STATE.update(
+        country_iso3=iso3, gdf=gdf, lookup=lookup, labels=labels, metadata=metadata
+    )
     return (choices, metadata)
+
+
+def list_adm1_options(country_iso3):
+    """Return ADM1 choices as records a terminal user can read.
+
+    Gradio stores dropdown choices as ``(label, key)`` pairs. The key is still
+    useful because it points to one exact boundary row, but the CLI must show
+    the human label beside it so users do not have to decode geoBoundaries IDs.
+    """
+    choices, meta = _load_geoboundaries_adm1(country_iso3)
+    rows = []
+    for number, (label, key) in enumerate(choices, start=1):
+        rows.append({"number": number, "name": label, "key": key})
+    return {"country": str(country_iso3).upper(), "metadata": meta, "choices": rows}
 
 
 # Reference cell 50, lines 130-143.
@@ -96,7 +125,7 @@ def load_adm1_callback(country_iso3):
             _m_ui_helpers._app_status("State/province list ready", detail),
         )
     except Exception as exc:
-        _m_state.ADM1_STATE.update(country_iso3=None, gdf=None, lookup={}, metadata={})
+        _m_state.ADM1_STATE.update(country_iso3=None, gdf=None, lookup={}, labels={}, metadata={})
         return (
             gr.Dropdown(choices=[], value=None),
             _m_ui_helpers._app_status("ADM1 loading failed", str(exc), False),
@@ -121,6 +150,47 @@ def _selected_adm1_geometry(country_iso3, admin_key):
     if not geom.is_valid:
         geom = geom.buffer(0)
     return (geom, name)
+
+
+def _selected_adm1_geometry_by_name(country_iso3, admin_name):
+    """Select ADM1 geometry by a human name such as ``Georgia`` or ``US-GA``.
+
+    The backend still keeps stable internal keys for exact reproducibility, but
+    people should be able to plan a state/province without first copying an
+    opaque ID. Matching is case-insensitive. If there is no exact match, a
+    unique partial match is accepted and ambiguous matches explain the choices.
+    """
+    iso3 = str(country_iso3 or "").upper().strip()
+    if _m_state.ADM1_STATE.get("gdf") is None or _m_state.ADM1_STATE.get("country_iso3") != iso3:
+        _load_geoboundaries_adm1(iso3)
+    query = str(admin_name or "").strip()
+    if not query:
+        raise ValueError("Give a state/province name, for example --admin-name Georgia")
+
+    normalized_query = query.casefold()
+    labels = _m_state.ADM1_STATE.get("labels", {})
+    exact = [
+        key
+        for key, label in labels.items()
+        if normalized_query in {str(label).casefold(), str(label).split(" (", 1)[0].casefold()}
+    ]
+    if len(exact) == 1:
+        return _selected_adm1_geometry(iso3, exact[0])
+
+    partial = [key for key, label in labels.items() if normalized_query in str(label).casefold()]
+    if len(partial) == 1:
+        return _selected_adm1_geometry(iso3, partial[0])
+
+    if not exact and not partial:
+        examples = ", ".join(str(label) for label in list(labels.values())[:8])
+        raise ValueError(
+            f"No ADM1 region named {query!r} for {iso3}. Run list-admin --country {iso3}. "
+            f"Examples: {examples}"
+        )
+
+    matches = exact or partial
+    names = ", ".join(str(labels[key]) for key in matches[:10])
+    raise ValueError(f"ADM1 name {query!r} is ambiguous for {iso3}. Matches: {names}")
 
 
 # Reference cell 50, lines 165-175.

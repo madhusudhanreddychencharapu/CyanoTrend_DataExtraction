@@ -24,5 +24,18 @@ keep_l2 = false
 keep_failed_scratch = true
 
 [lakes]
+# This section defines the HydroLAKES universe prepared by `prepare-lakes`.
+# Keep WORLD for global/state-by-state production unless you intentionally want
+# to reduce the lake reference file before planning.
+#
+# Allowed region values:
+#   WORLD
+#   USA
+#   Africa
+#   Asia
+#   Europe
+#   North America
+#   South America
+#   Oceania
 min_area_km2 = 10.0
 region = "WORLD"

@@ -14,6 +14,6 @@ GLOBAL_STATE = {
     "planning_geometry": None,
 }
 
-ADM1_STATE = {"country_iso3": None, "gdf": None, "lookup": {}, "metadata": {}}
+ADM1_STATE = {"country_iso3": None, "gdf": None, "lookup": {}, "labels": {}, "metadata": {}}
 
 CYAN_STATE = {"source_path": None, "source_date": None}

@@ -132,6 +132,14 @@ For a deliberate climatology experiment, `[processing] get_ancillary = false` sk
 
 `prepare-lakes` downloads/prepares HydroLAKES and filters by `[lakes] min_area_km2`. The default is WORLD, with a minimum area of 10 km². This may require a large initial reference-data download.
 
+To see the valid lake-universe values from the backend itself, run:
+
+```bash
+cyanolake --config config/local.toml list-regions
+```
+
+Edit `[lakes] region` in `config/local.toml` before `prepare-lakes` if you want a smaller lake universe. Valid values are `WORLD`, `USA`, `Africa`, `Asia`, `Europe`, `North America`, `South America`, and `Oceania`.
+
 ```bash
 cyanolake --config config/local.toml prepare-lakes
 ```
@@ -172,11 +180,17 @@ For worldwide discovery, omit `--bbox`. Start with a short date range and a boun
 cyanolake --config config/local.toml plan --start 2024-07-01 --end 2024-07-01 --grid-id G05_N40_W085
 ```
 
-For an administrative region, `list-admin` retrieves state/province keys, and `--country` is an ISO3 code. Then `--admin-key` selects an exact returned key. `RETURNED_KEY` is a placeholder.
+For an administrative region, `list-admin` prints state/province names and their exact internal keys. `--country` is an ISO3 code. For normal use, plan with `--admin-name` and the readable name. For exact reproducible reruns, use `--admin-key` and copy the key printed beside that name.
 
 ```bash
 cyanolake --config config/local.toml list-admin --country USA
-cyanolake --config config/local.toml plan --start 2024-07-01 --end 2024-07-01 --country USA --admin-key "RETURNED_KEY"
+cyanolake --config config/local.toml plan --start 2024-07-01 --end 2024-07-01 --country USA --admin-name "Georgia" --max-products 3
+```
+
+The key-based form is still available when you need to pin one exact boundary row:
+
+```bash
+cyanolake --config config/local.toml plan --start 2024-07-01 --end 2024-07-01 --country USA --admin-key "KEY_FROM_LIST_ADMIN"
 ```
 
 ## 10. Process one scene

@@ -33,6 +33,8 @@ def parser():
         help="TOML settings; relative paths resolve from this file",
     )
     sub = p.add_subparsers(dest="command", required=True)
+    sub.add_parser("guide", help="Print the recommended backend command chain")
+    sub.add_parser("list-regions", help="List supported [lakes].region values")
     sub.add_parser("init", help="Create the configured data and scratch folders")
     q = sub.add_parser("preflight", help="Check local setup without downloading a scene")
     q.add_argument(
@@ -53,10 +55,14 @@ def parser():
         default=3,
         help="Number of newest operational fallback tags; 0 disables fallback",
     )
-    q = sub.add_parser("prepare-lakes", help="Load a local vector or download/cache HydroLAKES")
+    q = sub.add_parser(
+        "prepare-lakes",
+        help="Load/download HydroLAKES using [lakes] values from the TOML config",
+    )
     q.add_argument("--source", type=Path, help="Existing HydroLAKES GPKG, shapefile or ZIP")
-    q = sub.add_parser("list-admin", help="Fetch/cache ADM1 names for a country")
+    q = sub.add_parser("list-admin", help="Show readable state/province choices for a country")
     q.add_argument("--country", required=True, help="Three-letter ISO country code, e.g. USA")
+    q.add_argument("--json", action="store_true", help="Print machine-readable JSON")
     q = sub.add_parser("plan", help="Discover scenes, intersect lakes and save a reusable plan")
     q.add_argument("--start", required=True, help="First UTC date, YYYY-MM-DD")
     q.add_argument("--end", required=True, help="Last UTC date, inclusive")
@@ -64,7 +70,8 @@ def parser():
     group.add_argument("--bbox", nargs=4, type=float, metavar=("WEST", "SOUTH", "EAST", "NORTH"))
     group.add_argument("--grid-id", help="For example G05_N40_W085")
     group.add_argument("--admin-key", help="ADM1 key returned by list-admin")
-    q.add_argument("--country", help="ISO3 country required with --admin-key")
+    group.add_argument("--admin-name", help="Readable ADM1 name, for example Georgia")
+    q.add_argument("--country", help="ISO3 country required with --admin-key or --admin-name")
     q.add_argument(
         "--max-products", type=positive_int, help="Optional catalogue cap for a smoke test"
     )
@@ -112,6 +119,68 @@ def emit(value):
     print(json.dumps(value, indent=2, default=str, allow_nan=False))
 
 
+def print_guide():
+    """Print the terminal workflow in the same order a new user needs it."""
+    lines = [
+        "CyanoLake backend guide",
+        "",
+        "1. Copy and edit the local config:",
+        "   cp -n config/default.toml config/local.toml",
+        "",
+        "2. See lake-universe choices:",
+        "   python -m cyanolake --config config/local.toml list-regions",
+        "",
+        "3. Prepare HydroLAKES after editing [lakes] in config/local.toml:",
+        "   python -m cyanolake --config config/local.toml prepare-lakes",
+        "",
+        "4. See state/province names for a country:",
+        "   python -m cyanolake --config config/local.toml list-admin --country USA",
+        "",
+        "5. Plan by state/province name:",
+        "   python -m cyanolake --config config/local.toml plan --start 2024-07-01 "
+        "--end 2024-07-01 --country USA --admin-name Georgia --max-products 3",
+        "",
+        "6. Process one planned scene first:",
+        "   python -m cyanolake --config config/local.toml run --plan PLAN_JSON --max-scenes 1",
+    ]
+    print("\n".join(lines))
+
+
+def print_regions(regions):
+    """Show TOML-ready lake-region values without requiring the dashboard."""
+    print("Supported [lakes].region values for config/local.toml:")
+    for region in regions:
+        print(f"  - {region}")
+    print("")
+    print('Example: region = "North America"')
+
+
+def print_admin_options(country, metadata, choices):
+    """Print state/province choices as a readable table plus copyable commands."""
+    name = metadata.get("boundaryName", country)
+    year = metadata.get("boundaryYearRepresented", "unknown")
+    source = metadata.get("boundarySource", "geoBoundaries")
+    license_name = metadata.get("boundaryLicense", "see geoBoundaries metadata")
+    print(f"State/province list for {name}")
+    print(f"Source: {source}; year: {year}; license: {license_name}")
+    print("")
+    print(f"{'No.':>3}  {'Name':<40} Key")
+    print(f"{'---':>3}  {'-' * 40} {'-' * 20}")
+    for row in choices:
+        print(f"{row['number']:>3}  {row['name']:<40} {row['key']}")
+    print("")
+    print("Preferred planning command: use the readable name.")
+    print(
+        "  python -m cyanolake --config config/local.toml plan --start YYYY-MM-DD "
+        f'--end YYYY-MM-DD --country {country} --admin-name "STATE_NAME"'
+    )
+    print("Advanced reproducible command: use the exact key from the table.")
+    print(
+        "  python -m cyanolake --config config/local.toml plan --start YYYY-MM-DD "
+        f'--end YYYY-MM-DD --country {country} --admin-key "KEY_FROM_TABLE"'
+    )
+
+
 def read_scene(path):
     scene = json.loads(Path(path).read_text())
     if "scene" in scene:
@@ -129,6 +198,14 @@ def read_scene(path):
 def run_command(args):
     from . import registry, settings, state, workspace
 
+    if args.command == "guide":
+        print_guide()
+        return 0
+    if args.command == "list-regions":
+        from .admin import LAKE_REGION_OPTIONS
+
+        print_regions(LAKE_REGION_OPTIONS)
+        return 0
     if args.command == "init":
         registry.registry_table()
         emit({"persistent_root": settings.PERSISTENT_ROOT, "scratch_root": settings.SCRATCH_ROOT})
@@ -184,11 +261,13 @@ def run_command(args):
         )
         return 0
     if args.command == "list-admin":
-        from .admin import load_adm1_callback
+        from .admin import list_adm1_options
 
-        result = load_adm1_callback(args.country)
-        print(result[1])
-        emit({"choices": list(state.ADM1_STATE["lookup"])})
+        result = list_adm1_options(args.country)
+        if args.json:
+            emit(result)
+        else:
+            print_admin_options(result["country"], result["metadata"], result["choices"])
         return 0 if state.ADM1_STATE["lookup"] else 2
     if args.command == "diagnose-l2":
         from .dense import diagnose_l2_mask
@@ -237,11 +316,15 @@ def run_command(args):
         if args.grid_id:
             bbox = archive.grid_id_to_bbox(args.grid_id)
             label = args.grid_id
-        elif args.admin_key:
+        elif args.admin_key or args.admin_name:
             if not args.country:
-                raise ValueError("--country is required with --admin-key")
-            admin.load_adm1_callback(args.country)
-            geom, label = admin._selected_adm1_geometry(args.country, args.admin_key)
+                raise ValueError("--country is required with --admin-key or --admin-name")
+            # The CLI accepts a readable name for normal use. The key path stays
+            # available for exact reruns when a user wants to pin one boundary row.
+            if args.admin_name:
+                geom, label = admin._selected_adm1_geometry_by_name(args.country, args.admin_name)
+            else:
+                geom, label = admin._selected_adm1_geometry(args.country, args.admin_key)
             bbox = tuple(geom.bounds)
         if bbox:
             bbox = catalogue.normalize_bbox(bbox)
